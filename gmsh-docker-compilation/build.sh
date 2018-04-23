@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## Get opencascade
-wget https://www.dropbox.com/s/zbqlp2i2kmwwkiy/opencascade-7.2.0.tgz?dl=0
+wget https://www.dropbox.com/s/zbqlp2i2kmwwkiy/opencascade-7.2.0.tgz
 
 ## Build the docker for Gmsh compilation
 echo -e "> Building the compiled version of Gmsh"
