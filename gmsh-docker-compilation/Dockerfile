@@ -27,7 +27,7 @@ RUN cd /root/opencascade \
 	&& mkdir build \
 	&& cd build \
 	&& cmake .. -DINSTALL_DIR=/usr/opencascade \
-	&& make -j24 \
+	&& make -j2 \
 	&& make install
 
 # Copy gmsh repository
@@ -38,5 +38,5 @@ RUN cd /root/Gmsh-source \
 	&& mkdir build \
 	&& cd build \
 	&& cmake .. -DCMAKE_INSTALL_PREFIX=/usr/gmsh \
-	&& make -j24 \
+	&& make -j2 \
 	&& make install
