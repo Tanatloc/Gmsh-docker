@@ -1,3 +1,5 @@
+[![Build Status](https://ci.inria.fr/freefem/buildStatus/icon?job=Gmsh-docker)](https://ci.inria.fr/freefem/job/Gmsh-docker/)
+
 # Gmsh docker
 
 Docker image of [Gmsh](http://gmsh.info/).
