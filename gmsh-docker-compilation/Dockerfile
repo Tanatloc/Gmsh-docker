@@ -3,7 +3,7 @@ FROM ubuntu
 MAINTAINER Simon Garnotel "simon.garnotel@airthium.com"
 
 # Update aptitude
-RUN export DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get upgrade -y && apt-get clean
 
 # Install dependencies
