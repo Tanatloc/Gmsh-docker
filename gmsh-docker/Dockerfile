@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get upgrade -y && apt-get clean
 
 # Install dependencies
-export DEBIAN_FRONTEND=noninteractive
+RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y \
 	liblapack-dev \
 	tcl8.6-dev \
