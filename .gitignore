@@ -1,5 +1,1 @@
-./RemoveAll.sh
-gmsh-docker-compilation/opencascade-7.2.0.tgz
-gmsh-docker/gmsh-compiled
-gmsh-docker/gmsh.tar.gz
-test/Pipe.mesh
+opencascade-7.4.0.tgz

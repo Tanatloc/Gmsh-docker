@@ -1,5 +1,3 @@
-[![Build Status](https://ci.inria.fr/freefem/buildStatus/icon?job=Gmsh-docker)](https://ci.inria.fr/freefem/job/Gmsh-docker/)
-
 # Gmsh docker
 
 Docker image of [Gmsh](http://gmsh.info/).
@@ -30,7 +28,7 @@ Start the Docker image in interactive mode:
 docker run -ti gmsh
 ```
 
-Execute all the `*.edp` scripts available in the current directory
+Execute all the `*.geo` scripts available in the current directory
 
 ```bash
 docker run -v $(pwd):/data gmsh
