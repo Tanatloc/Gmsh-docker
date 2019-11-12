@@ -27,6 +27,7 @@ WORKDIR $OCCPATH
 
 # Copy OCC repository
 RUN wget https://github.com/tanatloc/Gmsh-docker/releases/download/0/opencascade-7.4.0.tgz
+RUN tar xf opencascade-7.4.0.tgz
 
 # Configure and build OCC
 RUN cd opencascade-7.4.0\
