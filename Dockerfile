@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
   mesa-common-dev \
   tcl-dev \
   tk-dev \
+  wget \
   && rm -rf /var/lib/apt/lists/*
 
 ENV OCCPATH /root/occ
