@@ -34,7 +34,7 @@ RUN cd opencascade-7.4.0\
   && mkdir build \
   && cd build \
   && cmake .. -DINSTALL_DIR=/usr/occ/ \
-  && make \
+  && make -j "${nproc}" \
   && make install
 
 WORKDIR $GMSHPATH
@@ -47,7 +47,7 @@ RUN cd gmsh \
   && mkdir build \
   && cd build \
   && cmake .. -DCMAKE_INSTALL_PREFIX=/usr/gmsh \
-  && make \
+  && make -j "${nproc}" \
   && make install
 
 FROM ubuntu
