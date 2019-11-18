@@ -46,7 +46,8 @@ RUN git clone https://gitlab.onelab.info/gmsh/gmsh.git gmsh
 RUN cd gmsh \
   && mkdir build \
   && cd build \
-  && cmake .. -DCMAKE_INSTALL_PREFIX=/usr/gmsh \
+  && export PATH=/usr/occ:$PATH \
+  && cmake -DCMAKE_INSTALL_PREFIX=/usr/gmsh -DENABLE_OCC=ON -DOCC_INC=/usr/occ/include/opencascade .. \
   && make -j "$(nproc)" \
   && make install
 
@@ -74,4 +75,4 @@ RUN touch /root/.bach_aliases \
   && echo "alias gmsh='/usr/gmsh/bin/gmsh'" > /root/.bash_aliases
 
 ENV GLOB *.geo
-CMD ["bash", "-c", "ls /data/$GLOB | xargs -I {} gmsh -3 {}"]
+CMD ["bash", "-c", "ls /data/$GLOB | xargs -I {} /usr/gmsh/bin/gmsh -3 {}"]
